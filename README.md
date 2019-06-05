@@ -16,11 +16,15 @@ If the system has node installed, simply:
 As I wasn't entirely sure how the test suite will be calling my program with stdin, this program was built to be able to handle input by two different methods, as shown in the examples below.
 
 Method 1 - line by line where <CTRL-D> represents EOT:
-        node paint.js
-        2
-        1 G 2 M
-        1 M
-        <CTRL-D>
+```
+node paint.js
+2
+1 G 2 M
+1 M
+<CTRL-D>
+```
 
 Method 2 - piping a String with '\n' as a line terminator:
-        echo "2\n1 G 2 M\n1 M" | node paint.js
+```
+echo "2\n1 G 2 M\n1 M" | node paint.js
+```
